@@ -1,0 +1,2 @@
+lpc_body.png
+lpc_torso.png

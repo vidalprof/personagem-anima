@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Mundo animado (sprites reais) — demo</title>
+<style>
+  html,body{margin:0;height:100%;overflow:hidden;background:#3f6a34;-webkit-tap-highlight-color:transparent}
+  #jogo{position:fixed;inset:0;width:100vw;height:100vh}
+  #jogo canvas{display:block;image-rendering:pixelated;image-rendering:crisp-edges}
+  .hud{position:fixed;z-index:10;font:600 13px system-ui}
+  #somdica{left:50%;top:12px;transform:translateX(-50%);background:rgba(23,58,82,.92);color:#fff;padding:7px 14px;border-radius:10px;pointer-events:none}
+  #dica{left:50%;bottom:10px;transform:translateX(-50%);background:rgba(255,255,255,.9);color:#173a52;padding:6px 12px;border-radius:10px;pointer-events:none;max-width:92vw;text-align:center}
+  #btfs{right:12px;top:12px;background:rgba(23,58,82,.92);color:#fff;border:0;padding:8px 12px;border-radius:10px;cursor:pointer}
+</style>
+<script src="phaser.min.js"></script>
+</head><body>
+<div id="somdica" class="hud">🔊 Toque na tela (ou aperte uma tecla) para ligar o som</div>
+<button id="btfs" class="hud" onclick="window.__fs&&window.__fs()">⛶ Tela cheia</button>
+<div id="dica" class="hud">Setas ou WASD — explore o mundo · sprites reais · árvores com colisão · vento · sons</div>
+<div id="jogo"></div>
+<script src="game.js"></script>
+</body></html>
